@@ -40,10 +40,7 @@
   },
   "include": [
     "./config/jest/setupTests.ts",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/**/*.ts",
-    "**/**/*.tsx"
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
   ]
 }
