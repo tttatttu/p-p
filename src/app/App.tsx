@@ -31,7 +31,7 @@ function App() {
 
 export default App;
 
-const reducer = (currentState, action) => {
+const reducer = (currentState: any, action: any) => {
     switch (action.type) {
     case 'increment': {
         return { ...currentState, count: action.payload };

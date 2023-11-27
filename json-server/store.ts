@@ -1,8 +1,8 @@
-export const defineStore = (reducer, initialState) => {
+export const defineStore = (reducer: any, initialState: any) => {
     let state = initialState;
 
     const getState = () => state;
-    const dispatch = (action) => {
+    const dispatch = (action: any) => {
         state = reducer(state, action);
     };
 
