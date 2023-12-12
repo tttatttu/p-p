@@ -18,9 +18,10 @@ import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useParams } from 'react-router-dom';
+import { Page } from 'shared/ui/Page/Page';
+import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
 const reducers: ReducersList = {
     profile: profileReducer,
@@ -40,7 +41,6 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const validateErrors = useSelector(getProfileValidateErrors);
     const { id } = useParams<{id: string}>();
 
-
     const validateErrorTranslates = {
         [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
         [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорректный регион'),
@@ -50,11 +50,10 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     };
 
     useInitialEffect(() => {
-        if(id){
-        dispatch(fetchProfileData(id));}
-    })
-
-
+        if (id) {
+            dispatch(fetchProfileData(id));
+        }
+    });
 
     const onChangeFirstname = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ first: value || '' }));
@@ -90,7 +89,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 {validateErrors?.length && validateErrors.map((err) => (
                     <Text
@@ -113,7 +112,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                     onChangeCurrency={onChangeCurrency}
                     onChangeCountry={onChangeCountry}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };
