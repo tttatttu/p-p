@@ -32,3 +32,6 @@ export const Page = memo((props: PageProps) => {
         </section>
     );
 });
+
+const temp2: HTMLElemen
+temp2.addEventListner('scroll', () => { console.log(temp2.scrollHeight - temp2.scrollTop - temp2.offsetHeight); });
