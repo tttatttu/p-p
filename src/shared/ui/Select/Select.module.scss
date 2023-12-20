@@ -1,4 +1,4 @@
-.SelectWrapper {
+.Wrapper {
     display: flex;
 }
 
@@ -11,10 +11,10 @@
     outline: none;
     color: var(--primary-color);
     padding: 2px 10px 2px 2px;
-    border: 1px solid var(--primary-color)
+    border: 1px solid var(--primary-color);
 }
 
 .option {
     color: var(--inverted-primary-color);
-    background: var(--inverted-bg-color)
+    background: var(--inverted-bg-color);
 }
