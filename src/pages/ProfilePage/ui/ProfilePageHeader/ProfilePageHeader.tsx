@@ -4,11 +4,13 @@ import { useTranslation } from 'react-i18next';
 import { Text } from 'shared/ui/Text/Text';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useSelector } from 'react-redux';
-import { getProfileData, getProfileReadonly, profileActions, updateProfileData } from 'entities/Profile';
+import {
+    getProfileData, getProfileReadonly, profileActions, updateProfileData,
+} from 'entities/Profile';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useCallback } from 'react';
-import cls from './ProfilePageHeader.module.scss';
 import { getUserAuthData } from 'entities/User';
+import cls from './ProfilePageHeader.module.scss';
 
 interface ProfilePageHeaderProps {
     className?: string;
@@ -48,25 +50,25 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
                             {t('Редактировать')}
                         </Button>
                     )
-                    : (
-                        <>
-                            <Button
-                                className={cls.editBtn}
-                                theme={ButtonTheme.OUTLINE_RED}
-                                onClick={onCancelEdit}
-                            >
-                                {t('Отменить')}
-                            </Button>
-                            <Button
-                                className={cls.saveBtn}
-                                theme={ButtonTheme.OUTLINE}
-                                onClick={onSave}
-                            >
-                                {t('Сохранить')}
-                            </Button>
+                        : (
+                            <>
+                                <Button
+                                    className={cls.editBtn}
+                                    theme={ButtonTheme.OUTLINE_RED}
+                                    onClick={onCancelEdit}
+                                >
+                                    {t('Отменить')}
+                                </Button>
+                                <Button
+                                    className={cls.saveBtn}
+                                    theme={ButtonTheme.OUTLINE}
+                                    onClick={onSave}
+                                >
+                                    {t('Сохранить')}
+                                </Button>
 
-                        </>
-                    )}
+                            </>
+                        )}
                 </div>
             )}
         </div>

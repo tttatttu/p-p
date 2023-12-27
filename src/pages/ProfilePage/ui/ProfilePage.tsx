@@ -39,7 +39,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
     const validateErrors = useSelector(getProfileValidateErrors);
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
 
     const validateErrorTranslates = {
         [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении'),
@@ -88,7 +88,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     }, [dispatch]);
 
     return (
-        <DynamicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
                 {validateErrors?.length && validateErrors.map((err) => (
