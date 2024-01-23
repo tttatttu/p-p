@@ -10,6 +10,7 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { ARTICLE_LIST_ITEM_LOCALSTORAGE_IDX } from 'shared/const/localstorage';
 import cls from './ArticleListItem.module.scss';
 import {
     Article, ArticleBlockType, ArticleTextBlock, ArticleView,
@@ -21,10 +22,11 @@ interface ArticleListItemProps {
     article: Article;
     view: ArticleView;
     target?: HTMLAttributeAnchorTarget
+    index?: number
 }
 
 export const ArticleListItem = memo(({
-    className, article, view, target,
+    className, article, view, target, index,
 }: ArticleListItemProps) => {
     const { t } = useTranslation();
 
@@ -35,6 +37,10 @@ export const ArticleListItem = memo(({
             <Icon Svg={EyeIcon} />
         </>
     );
+
+    const handleButtonClick = () => {
+        sessionStorage.setItem(ARTICLE_LIST_ITEM_LOCALSTORAGE_IDX, JSON.stringify(index));
+    };
 
     if (view === ArticleView.BIG) {
         const textBlock = article.blocks.find(
@@ -59,8 +65,9 @@ export const ArticleListItem = memo(({
                         <AppLink
                             target={target}
                             to={RoutePath.article_details + article.id}
+
                         >
-                            <Button theme={ButtonTheme.OUTLINE}>
+                            <Button theme={ButtonTheme.OUTLINE} onClick={handleButtonClick}>
                                 {t('Читать далее...')}
                             </Button>
                         </AppLink>
@@ -76,6 +83,7 @@ export const ArticleListItem = memo(({
             target={target}
             to={RoutePath.article_details + article.id}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+            // onClick={handleButtonClick}
         >
             <Card className={cls.card}>
                 <div className={cls.imageWrapper}>
