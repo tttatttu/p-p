@@ -7627,6 +7627,15 @@
     "path-is-absolute" "^1.0.0"
     "rimraf" "^2.2.8"
 
+"fs-extra@^10.0.0":
+  "integrity" "sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ=="
+  "resolved" "https://registry.npmjs.org/fs-extra/-/fs-extra-10.1.0.tgz"
+  "version" "10.1.0"
+  dependencies:
+    "graceful-fs" "^4.2.0"
+    "jsonfile" "^6.0.1"
+    "universalify" "^2.0.0"
+
 "fs-extra@^9.0.0", "fs-extra@^9.0.1", "fs-extra@^9.1.0":
   "integrity" "sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ=="
   "resolved" "https://registry.npmjs.org/fs-extra/-/fs-extra-9.1.0.tgz"
@@ -9420,6 +9429,14 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
+"jest-html-reporters@^3.1.7":
+  "integrity" "sha512-GTmjqK6muQ0S0Mnksf9QkL9X9z2FGIpNSxC52E0PHDzjPQ1XDu2+XTI3B3FS43ZiUzD1f354/5FfwbNIBzT7ew=="
+  "resolved" "https://registry.npmjs.org/jest-html-reporters/-/jest-html-reporters-3.1.7.tgz"
+  "version" "3.1.7"
+  dependencies:
+    "fs-extra" "^10.0.0"
+    "open" "^8.0.3"
+
 "jest-jasmine2@^27.5.1":
   "integrity" "sha512-jtq7VVyG8SqAorDpApwiJJImd0V2wv1xzdheGHRGyuT7gZm6gG47QEskOlzsN1PG/6WNaCo5pmwMHDf3AkG2pQ=="
   "resolved" "https://registry.npmjs.org/jest-jasmine2/-/jest-jasmine2-27.5.1.tgz"
@@ -11144,7 +11161,7 @@
     "is-docker" "^2.0.0"
     "is-wsl" "^2.1.1"
 
-"open@^8.0.9":
+"open@^8.0.3", "open@^8.0.9":
   "integrity" "sha512-XgFPPM+B28FtCCgSb9I+s9szOC1vZRSwgWsRUA5ylIxRTgKozqjOCrVOqGsYABPYK5qnfqClxZTFBa8PKt2v6Q=="
   "resolved" "https://registry.npmjs.org/open/-/open-8.4.0.tgz"
   "version" "8.4.0"
