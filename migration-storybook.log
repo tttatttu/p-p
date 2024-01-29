@@ -1,0 +1,243 @@
+🔎 checking possible migrations..
+
+🔎 found a 'new-frameworks' migration:
+╭ Automigration detected ────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                        │
+│   We've detected your project is not fully setup with Storybook's 7 new framework format.                                              │
+│                                                                                                                                        │
+│   Storybook 7 introduced the concept of frameworks, which abstracts configuration for renderers (e.g. React, Vue), builders (e.g.      │
+│   Webpack, Vite) and defaults to make integrations easier.                                                                             │
+│                                                                                                                                        │
+│   Your project should be updated to use Storybook's framework: @storybook/react-webpack5. We can attempt to do this for you            │
+│   automatically.                                                                                                                       │
+│                                                                                                                                        │
+│   Here are the steps this migration will do to migrate your project:                                                                   │
+│   - Remove the following dependencies:                                                                                                 │
+│   - * @storybook/builder-webpack5                                                                                                      │
+│   - * @storybook/manager-webpack5                                                                                                      │
+│   - Add the following dependencies:                                                                                                    │
+│   - * @storybook/react-webpack5                                                                                                        │
+│   - Remove the core.builder field in config/storybook/main.js.                                                                         │
+│                                                                                                                                        │
+│                                                                                                                                        │
+│   To learn more about the new framework format, see:                                                                                   │
+│   https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#new-framework-api                                                    │
+│                                                                                                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'new-frameworks' migration on your project? › (Y/n)✔ Do you want to run the 'new-frameworks' migration on your project? … yes
+✅ Removing dependencies: @storybook/builder-webpack5, @storybook/manager-webpack5
+✅ Installing new dependencies: @storybook/react-webpack5
+
+An error occurred while installing dependencies:
+NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+❌ error when running new-frameworks migration
+HandledError: NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+    at NPMProxy.addDependencies (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:55:75)
+    at async Object.run (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:285:755)
+    ... 5 lines matching cause stack trace ...
+    at async upgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:452:1754) {
+  handled: true,
+  cause: Error: NPM error ERESOLVE - Dependency resolution error.
+  
+  Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+      at NPMProxy.runAddDeps (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:57:8042)
+      at async NPMProxy.addDependencies (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:54:853)
+      at async Object.run (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:285:755)
+      at async runFixes (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:418:1144)
+      at async automigrate (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:413:676)
+      at async deprecatedUpgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:445:3895)
+      at async doUpgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:445:4500)
+      at async withTelemetry (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/core-server/dist/index.js:65:3948)
+      at async upgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:452:1754)
+}
+
+
+🔎 found a 'eslintPlugin' migration:
+╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                      │
+│   We've detected you are not using our eslint-plugin.                                                                                │
+│                                                                                                                                      │
+│   In order to have the best experience with Storybook and follow best practices, we advise you to install eslint-plugin-storybook.   │
+│                                                                                                                                      │
+│   More info: https://github.com/storybookjs/eslint-plugin-storybook#readme                                                           │
+│                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'eslintPlugin' migration on your project? › (Y/n)✔ Do you want to run the 'eslintPlugin' migration on your project? … yes
+✅ Adding dependencies: eslint-plugin-storybook
+
+An error occurred while installing dependencies:
+NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+❌ error when running eslintPlugin migration
+HandledError: NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+    at NPMProxy.addDependencies (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:55:75)
+    at async Object.run (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:196:197)
+    ... 5 lines matching cause stack trace ...
+    at async upgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:452:1754) {
+  handled: true,
+  cause: Error: NPM error ERESOLVE - Dependency resolution error.
+  
+  Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+      at NPMProxy.runAddDeps (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:57:8042)
+      at async NPMProxy.addDependencies (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:54:853)
+      at async Object.run (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:196:197)
+      at async runFixes (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:418:1144)
+      at async automigrate (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:413:676)
+      at async deprecatedUpgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:445:3895)
+      at async doUpgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:445:4500)
+      at async withTelemetry (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/core-server/dist/index.js:65:3948)
+      at async upgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:452:1754)
+}
+
+
+🔎 found a 'storybook-binary' migration:
+╭ Automigration detected ────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                        │
+│   We've detected you are using Storybook 8.0.0 without Storybook's storybook binary. Starting in Storybook 7.0, it has to be           │
+│   installed.                                                                                                                           │
+│                                                                                                                                        │
+│                                                                                                                                        │
+│   More info: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#start-storybook--build-storybook-binaries-removed         │
+│                                                                                                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'storybook-binary' migration on your project? › (Y/n)✔ Do you want to run the 'storybook-binary' migration on your project? … yes
+
+✅ Adding 'storybook' as dev dependency
+
+
+An error occurred while installing dependencies:
+NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+❌ error when running storybook-binary migration
+HandledError: NPM error ERESOLVE - Dependency resolution error.
+
+Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+    at NPMProxy.addDependencies (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:55:75)
+    at async Object.run (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:228:477)
+    ... 5 lines matching cause stack trace ...
+    at async upgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:452:1754) {
+  handled: true,
+  cause: Error: NPM error ERESOLVE - Dependency resolution error.
+  
+  Please check the logfile generated at ./storybook.log for troubleshooting and try again.
+      at NPMProxy.runAddDeps (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:57:8042)
+      at async NPMProxy.addDependencies (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:54:853)
+      at async Object.run (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:228:477)
+      at async runFixes (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:418:1144)
+      at async automigrate (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:413:676)
+      at async deprecatedUpgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:445:3895)
+      at async doUpgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:445:4500)
+      at async withTelemetry (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/core-server/dist/index.js:65:3948)
+      at async upgrade (/Users/tatyanamalashkina/.npm/_npx/d28cfb4b54958d89/node_modules/@storybook/cli/dist/generate.js:452:1754)
+}
+
+
+🔎 found a 'sb-scripts' migration:
+╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                      │
+│   We've detected you are using Storybook 8.0.0 with scripts from previous versions of Storybook.                                     │
+│   Starting in Storybook 7, the start-storybook and build-storybook binaries have changed to storybook dev and storybook build        │
+│   respectively.                                                                                                                      │
+│   In order to work with Storybook 8.0.0, your storybook scripts have to be adjusted to use the binary. We can adjust them for you:   │
+│                                                                                                                                      │
+│   storybook                                                                                                                          │
+│   from:                                                                                                                              │
+│   start-storybook -p 6006 -c ./config/storybook                                                                                      │
+│   to:                                                                                                                                │
+│   storybook dev -p 6006 -c ./config/storybook                                                                                        │
+│                                                                                                                                      │
+│   storybook:build                                                                                                                    │
+│   from:                                                                                                                              │
+│   build-storybook -c ./config/storybook                                                                                              │
+│   to:                                                                                                                                │
+│   storybook build -c ./config/storybook                                                                                              │
+│                                                                                                                                      │
+│   In case this migration did not cover all of your scripts, or you'd like more info:                                                 │
+│   https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#start-storybook--build-storybook-binaries-removed                  │
+│                                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'sb-scripts' migration on your project? › (Y/n)✔ Do you want to run the 'sb-scripts' migration on your project? … yes
+✅ Updating scripts in package.json
+
+
+✅ ran sb-scripts migration
+
+🔎 found a 'incompatible-addons' migration:
+╭ Manual migration detected ─────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                        │
+│   Attention: We've detected that you're using the following addons in versions which are known to be incompatible with Storybook 7:    │
+│                                                                                                                                        │
+│   - storybook-addon-mock@2.4.1                                                                                                         │
+│                                                                                                                                        │
+│   Please be aware they might not work in Storybook 7. Reach out to their maintainers for updates and check the following Github        │
+│   issue for more information:                                                                                                          │
+│   https://github.com/storybookjs/storybook/issues/20529                                                                                │
+│                                                                                                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+? Select continue once you have made the required changes, or quit to exit the migration process › quit / continue✔ Select continue once you have made the required changes, or quit to exit the migration process … quit / continue
+
+🔎 found a 'removedglobalclientapis' migration:
+╭ Manual migration detected ───────────────────────────────────────────────────────────────────────╮
+│                                                                                                  │
+│   Attention: We could not automatically make this change. You'll need to do it manually.         │
+│                                                                                                  │
+│   The following APIs (used in "config/storybook/preview.js") have been removed from Storybook:   │
+│                                                                                                  │
+│   - addDecorator                                                                                 │
+│                                                                                                  │
+│   Please see the migration guide for more information:                                           │
+│   https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#removed-global-client-apis     │
+│                                                                                                  │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+? Select continue once you have made the required changes, or quit to exit the migration process › quit / continue? Select continue once you have made the required changes, or quit to exit the migration process › quit / continue✔ Select continue once you have made the required changes, or quit to exit the migration process … quit / continue
+
+╭ Migration check ran with failures ─────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                        │
+│   Successful migrations:                                                                                                               │
+│                                                                                                                                        │
+│   sb-scripts                                                                                                                           │
+│                                                                                                                                        │
+│   Failed migrations:                                                                                                                   │
+│                                                                                                                                        │
+│   new-frameworks:                                                                                                                      │
+│   NPM error ERESOLVE - Dependency resolution error.                                                                                    │
+│                                                                                                                                        │
+│   Please check the logfile generated at ./storybook.log for troubleshooting and try again.                                             │
+│   eslintPlugin:                                                                                                                        │
+│   NPM error ERESOLVE - Dependency resolution error.                                                                                    │
+│                                                                                                                                        │
+│   Please check the logfile generated at ./storybook.log for troubleshooting and try again.                                             │
+│   storybook-binary:                                                                                                                    │
+│   NPM error ERESOLVE - Dependency resolution error.                                                                                    │
+│                                                                                                                                        │
+│   Please check the logfile generated at ./storybook.log for troubleshooting and try again.                                             │
+│                                                                                                                                        │
+│   You can find the full logs in /Users/tatyanamalashkina/Documents/p-p/migration-storybook.log                                         │
+│                                                                                                                                        │
+│   Manual migrations:                                                                                                                   │
+│                                                                                                                                        │
+│   incompatible-addons, removedglobalclientapis                                                                                         │
+│                                                                                                                                        │
+│   ─────────────────────────────────────────────────                                                                                    │
+│                                                                                                                                        │
+│   If you'd like to run the migrations again, you can do so by running 'npx storybook@next automigrate'                                 │
+│                                                                                                                                        │
+│   The automigrations try to migrate common patterns in your project, but might not contain everything needed to migrate to the         │
+│   latest version of Storybook.                                                                                                         │
+│                                                                                                                                        │
+│   Please check the changelog and migration guide for manual migrations and more information:                                           │
+│   https://storybook.js.org/migration-guides/7.0                                                                                        │
+│   And reach out on Discord if you need help: https://discord.gg/storybook                                                              │
+│                                                                                                                                        │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+

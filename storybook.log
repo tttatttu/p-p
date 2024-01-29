@@ -1,0 +1,27 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: loki@0.34.0
+npm ERR! Found: @storybook/react@8.0.0-alpha.15
+npm ERR! node_modules/@storybook/react
+npm ERR!   dev @storybook/react@"^8.0.0-alpha.15" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peerOptional @storybook/react@"^5 || ^6 || ^7" from loki@0.34.0
+npm ERR! node_modules/loki
+npm ERR!   dev loki@"^0.34.0" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: @storybook/react@7.6.10
+npm ERR! node_modules/@storybook/react
+npm ERR!   peerOptional @storybook/react@"^5 || ^6 || ^7" from loki@0.34.0
+npm ERR!   node_modules/loki
+npm ERR!     dev loki@"^0.34.0" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See /Users/tatyanamalashkina/.npm/eresolve-report.txt for a full report.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/tatyanamalashkina/.npm/_logs/2024-01-29T18_18_18_113Z-debug-0.log
