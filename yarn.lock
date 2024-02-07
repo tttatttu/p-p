@@ -1928,6 +1928,45 @@
   "resolved" "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.21.tgz"
   "version" "1.0.0-next.21"
 
+"@react-spring/animated@~9.7.3":
+  "integrity" "sha512-5CWeNJt9pNgyvuSzQH+uy2pvTg8Y4/OisoscZIR8/ZNLIOI+CatFBhGZpDGTF/OzdNFsAoGk3wiUYTwoJ0YIvw=="
+  "resolved" "https://registry.npmjs.org/@react-spring/animated/-/animated-9.7.3.tgz"
+  "version" "9.7.3"
+  dependencies:
+    "@react-spring/shared" "~9.7.3"
+    "@react-spring/types" "~9.7.3"
+
+"@react-spring/core@~9.7.3":
+  "integrity" "sha512-IqFdPVf3ZOC1Cx7+M0cXf4odNLxDC+n7IN3MDcVCTIOSBfqEcBebSv+vlY5AhM0zw05PDbjKrNmBpzv/AqpjnQ=="
+  "resolved" "https://registry.npmjs.org/@react-spring/core/-/core-9.7.3.tgz"
+  "version" "9.7.3"
+  dependencies:
+    "@react-spring/animated" "~9.7.3"
+    "@react-spring/shared" "~9.7.3"
+    "@react-spring/types" "~9.7.3"
+
+"@react-spring/shared@~9.7.3":
+  "integrity" "sha512-NEopD+9S5xYyQ0pGtioacLhL2luflh6HACSSDUZOwLHoxA5eku1UPuqcJqjwSD6luKjjLfiLOspxo43FUHKKSA=="
+  "resolved" "https://registry.npmjs.org/@react-spring/shared/-/shared-9.7.3.tgz"
+  "version" "9.7.3"
+  dependencies:
+    "@react-spring/types" "~9.7.3"
+
+"@react-spring/types@~9.7.3":
+  "integrity" "sha512-Kpx/fQ/ZFX31OtlqVEFfgaD1ACzul4NksrvIgYfIFq9JpDHFwQkMVZ10tbo0FU/grje4rcL4EIrjekl3kYwgWw=="
+  "resolved" "https://registry.npmjs.org/@react-spring/types/-/types-9.7.3.tgz"
+  "version" "9.7.3"
+
+"@react-spring/web@^9.7.3":
+  "integrity" "sha512-BXt6BpS9aJL/QdVqEIX9YoUy8CE6TJrU0mNCqSoxdXlIeNcEBWOfIyE6B14ENNsyQKS3wOWkiJfco0tCr/9tUg=="
+  "resolved" "https://registry.npmjs.org/@react-spring/web/-/web-9.7.3.tgz"
+  "version" "9.7.3"
+  dependencies:
+    "@react-spring/animated" "~9.7.3"
+    "@react-spring/core" "~9.7.3"
+    "@react-spring/shared" "~9.7.3"
+    "@react-spring/types" "~9.7.3"
+
 "@reduxjs/toolkit@^1.8.0":
   "integrity" "sha512-cdfHWfcvLyhBUDicoFwG1u32JqvwKDxLxDd7zSmSoFw/RhYLOygIRtmaMjPRUUHmVmmAGAvquLLsKKU/677kSQ=="
   "resolved" "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-1.8.0.tgz"
@@ -3732,6 +3771,18 @@
   dependencies:
     "@typescript-eslint/types" "5.12.1"
     "eslint-visitor-keys" "^3.0.0"
+
+"@use-gesture/core@10.3.0":
+  "integrity" "sha512-rh+6MND31zfHcy9VU3dOZCqGY511lvGcfyJenN4cWZe0u1BH6brBpBddLVXhF2r4BMqWbvxfsbL7D287thJU2A=="
+  "resolved" "https://registry.npmjs.org/@use-gesture/core/-/core-10.3.0.tgz"
+  "version" "10.3.0"
+
+"@use-gesture/react@^10.3.0":
+  "integrity" "sha512-3zc+Ve99z4usVP6l9knYVbVnZgfqhKah7sIG+PS2w+vpig2v2OLct05vs+ZXMzwxdNCMka8B+8WlOo0z6Pn6DA=="
+  "resolved" "https://registry.npmjs.org/@use-gesture/react/-/react-10.3.0.tgz"
+  "version" "10.3.0"
+  dependencies:
+    "@use-gesture/core" "10.3.0"
 
 "@webassemblyjs/ast@^1.11.5", "@webassemblyjs/ast@1.11.6":
   "integrity" "sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q=="
