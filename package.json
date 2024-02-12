@@ -26,7 +26,7 @@
     "storybook:build": "build-storybook -c ./config/storybook",
     "prepare": "husky install",
     "generate:slice": "node ./scripts/createSlice/index.js",
-    "ts-node": "ts-node ./scripts/updateImports.ts"
+    "ts-node": "ts-node ./scripts/refactoring/createPublicApiForSharedUi.ts"
   },
   "keywords": [],
   "author": "",
@@ -124,7 +124,8 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-virtualized": "^9.22.3",
-    "react-virtuoso": "^4.6.3"
+    "react-virtuoso": "^4.6.3",
+    "ts-morph": "^21.0.1"
   },
   "loki": {
     "configurations": {
