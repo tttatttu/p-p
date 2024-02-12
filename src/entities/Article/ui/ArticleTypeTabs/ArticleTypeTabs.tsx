@@ -10,8 +10,7 @@ interface ArticleTypeTabsProps {
     onChangeType: (type: ArticleType) => void;
 }
 
-export const ArticleTypeTabs = memo((props: ArticleTypeTabsProps) => {
-    const { className, value, onChangeType } = props;
+export const ArticleTypeTabs = memo(({ className, value, onChangeType }: ArticleTypeTabsProps) => {
     const { t } = useTranslation();
 
     const typeTabs = useMemo<TabItem[]>(() => [

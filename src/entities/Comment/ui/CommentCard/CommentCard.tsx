@@ -15,9 +15,7 @@ interface CommentCardProps {
     isLoading?: boolean;
 }
 
-export const CommentCard = memo((props: CommentCardProps) => {
-    const { className, comment, isLoading } = props;
-
+export const CommentCard = memo(({ className, comment, isLoading }: CommentCardProps) => {
     if (isLoading) {
         return (
             <VStack gap="8" max className={classNames(cls.CommentCard, {}, [className, cls.loading])}>

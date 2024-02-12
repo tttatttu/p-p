@@ -39,17 +39,15 @@ const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
     [TextSize.L]: 'h1',
 };
 
-export const Text = memo((props: TextProps) => {
-    const {
-        className,
-        text,
-        title,
-        theme = TextTheme.PRIMARY,
-        align = TextAlign.LEFT,
-        size = TextSize.M,
-        'data-testid': dataTestId = 'Text',
-    } = props;
-
+export const Text = memo(({
+    className,
+    text,
+    title,
+    theme = TextTheme.PRIMARY,
+    align = TextAlign.LEFT,
+    size = TextSize.M,
+    'data-testid': dataTestId = 'Text',
+}: TextProps) => {
     const HeaderTag = mapSizeToHeaderTag[size];
 
     const mods: Mods = {
@@ -69,10 +67,7 @@ export const Text = memo((props: TextProps) => {
                 </HeaderTag>
             )}
             {text && (
-                <p
-                    className={cls.text}
-                    data-testid={`${dataTestId}.Paragraph`}
-                >
+                <p className={cls.text} data-testid={`${dataTestId}.Paragraph`}>
                     {text}
                 </p>
             )}

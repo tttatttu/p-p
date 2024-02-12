@@ -29,15 +29,14 @@ const getSkeletons = () => new Array(3).fill(0).map((_, index) => (
     <ArticleListItemSkeleton key={index} view={ArticleView.BIG} className={cls.card} />
 ));
 
-export const ArticleList = memo((props: ArticleListProps) => {
-    const {
-        className,
-        articles,
-        view = ArticleView.SMALL,
-        isLoading,
-        target,
-        onLoadNextPart,
-    } = props;
+export const ArticleList = memo(({
+    className,
+    articles,
+    view = ArticleView.SMALL,
+    isLoading,
+    target,
+    onLoadNextPart,
+}: ArticleListProps) => {
     const { t } = useTranslation();
     const [selectedArticleId, setSelectedArticleId] = useState(1);
     const virtuosoGridRef = useRef<VirtuosoGridHandle>(null);

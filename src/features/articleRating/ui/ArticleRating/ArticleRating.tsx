@@ -11,8 +11,7 @@ export interface ArticleRatingProps {
     articleId: string;
 }
 
-const ArticleRating = memo((props: ArticleRatingProps) => {
-    const { className, articleId } = props;
+const ArticleRating = memo(({ className, articleId }: ArticleRatingProps) => {
     const { t } = useTranslation();
     const userData = useSelector(getUserAuthData);
 

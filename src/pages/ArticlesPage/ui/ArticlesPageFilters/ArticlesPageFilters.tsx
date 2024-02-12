@@ -26,8 +26,7 @@ interface ArticlesPageFiltersProps {
     className?: string;
 }
 
-export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
-    const { className } = props;
+export const ArticlesPageFilters = memo(({ className }: ArticlesPageFiltersProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
     const view = useSelector(getArticlesPageView);

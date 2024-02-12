@@ -28,22 +28,21 @@ interface ProfileCardProps {
     onChangeCountry?: (country: Country) => void;
 }
 
-export const ProfileCard = (props: ProfileCardProps) => {
-    const {
-        className,
-        data,
-        isLoading,
-        error,
-        readonly,
-        onChangeFirstname,
-        onChangeLastname,
-        onChangeAge,
-        onChangeCity,
-        onChangeAvatar,
-        onChangeUsername,
-        onChangeCountry,
-        onChangeCurrency,
-    } = props;
+export const ProfileCard = ({
+    className,
+    data,
+    isLoading,
+    error,
+    readonly,
+    onChangeFirstname,
+    onChangeLastname,
+    onChangeAge,
+    onChangeCity,
+    onChangeAvatar,
+    onChangeUsername,
+    onChangeCountry,
+    onChangeCurrency,
+}: ProfileCardProps) => {
     const { t } = useTranslation('profile');
 
     if (isLoading) {

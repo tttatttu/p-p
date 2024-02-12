@@ -10,8 +10,7 @@ interface ArticleTextBlockComponentProps {
     block: ArticleTextBlock;
 }
 
-export const ArticleTextBlockComponent = memo((props: ArticleTextBlockComponentProps) => {
-    const { className, block } = props;
+export const ArticleTextBlockComponent = memo(({ className, block }: ArticleTextBlockComponentProps) => {
     const { t } = useTranslation();
 
     return (
