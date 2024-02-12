@@ -3,10 +3,12 @@ import { StateSchema } from '@/app/providers/StoreProvider';
 
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { SortOrder } from '@/shared/types';
-import { Article } from '@/entities/Article/model/types/article';
-import { ArticleSortField, ArticleType, ArticleView } from '@/entities/Article/model/consts/articleConsts';
+
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
+import {
+    Article, ArticleSortField, ArticleType, ArticleView,
+} from '@/entities/Article';
 
 const articlesAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id,

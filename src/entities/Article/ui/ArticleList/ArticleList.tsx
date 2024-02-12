@@ -6,9 +6,8 @@ import { useTranslation } from 'react-i18next';
 import { Virtuoso, VirtuosoGrid, VirtuosoGridHandle } from 'react-virtuoso';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text, TextSize } from '@/shared/ui/Text/Text';
-import { ArticlesPageFilters } from '@/pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters';
 import { ARTICLE_LIST_ITEM_LOCALSTORAGE_IDX } from '@/shared/const/localstorage';
-import { ArticleView } from '@/entities/Article/model/consts/articleConsts';
+import { ArticleView } from '../../model/consts/articleConsts';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
@@ -23,7 +22,7 @@ interface ArticleListProps {
     onLoadNextPart?: ()=> void,
 }
 
-const Header = () => <ArticlesPageFilters />;
+// const Header = () => <ArticlesPageFilters />;
 
 const getSkeletons = () => new Array(3).fill(0).map((_, index) => (
     <ArticleListItemSkeleton key={index} view={ArticleView.BIG} className={cls.card} />
@@ -110,13 +109,15 @@ export const ArticleList = memo(({
                     itemContent={renderArticle}
                     endReached={onLoadNextPart}
                     initialTopMostItemIndex={selectedArticleId}
-                    components={{ Header, Footer }}
+                    // components={{ Header, Footer }}
+                    components={{ Footer }}
                 />
             ) : (
                 <VirtuosoGrid
                     ref={virtuosoGridRef}
                     totalCount={articles.length}
-                    components={{ Header, ScrollSeekPlaceholder: ItemContainerComp }}
+                    // components={{ Header, ScrollSeekPlaceholder: ItemContainerComp }}
+                    components={{ ScrollSeekPlaceholder: ItemContainerComp }}
                     endReached={onLoadNextPart}
                     data={articles}
                     itemContent={renderArticle}

@@ -6,12 +6,12 @@ import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/Dynam
 import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
-import { ArticleDetails } from '@/entities/Article/ui/ArticleDetails/ArticleDetails';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import cls from './ArticleDetailsPage.module.scss';
 import { articleDetailsPageReducer } from '../../model/slices';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 import { ArticleRating } from '@/features/articleRating';
+import { ArticleDetails } from '@/entities/Article';
 
 interface ArticleDetailsPageProps {
     className?: string;
