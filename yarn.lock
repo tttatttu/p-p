@@ -6947,11 +6947,12 @@
     "requireindex" "^1.1.0"
     "ts-dedent" "^2.2.0"
 
-"eslint-plugin-ulbi-tv-plugin@^0.0.3":
-  "integrity" "sha512-2ui5LAdCBp3eQ/sNIvKXhONt5ozysVW9s6QVDgZjlszSqCYIAzyukhFx4jdOhejf0j+mbTxKQo4tI5id0SCW4g=="
-  "resolved" "https://registry.npmjs.org/eslint-plugin-ulbi-tv-plugin/-/eslint-plugin-ulbi-tv-plugin-0.0.3.tgz"
-  "version" "0.0.3"
+"eslint-plugin-ulbi-tv-plugin@^0.0.4":
+  "integrity" "sha512-HUnhl2efVhg78CzYacK3J07vtWDhVAi1HVhObg39fpc/qv0HjA6fyJUqH8sT0QsUTHjdfRBn1CoLS9t6SWJrhQ=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-ulbi-tv-plugin/-/eslint-plugin-ulbi-tv-plugin-0.0.4.tgz"
+  "version" "0.0.4"
   dependencies:
+    "micromatch" "^4.0.5"
     "requireindex" "^1.2.0"
 
 "eslint-scope@^4.0.3":
@@ -10331,7 +10332,7 @@
     "snapdragon" "^0.8.1"
     "to-regex" "^3.0.2"
 
-"micromatch@^4.0.0", "micromatch@^4.0.2", "micromatch@^4.0.4":
+"micromatch@^4.0.0", "micromatch@^4.0.2", "micromatch@^4.0.4", "micromatch@^4.0.5":
   "integrity" "sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA=="
   "resolved" "https://registry.npmjs.org/micromatch/-/micromatch-4.0.5.tgz"
   "version" "4.0.5"
