@@ -9,9 +9,9 @@ import { Text, TextSize } from '@/shared/ui/Text';
 import { ARTICLE_LIST_ITEM_LOCALSTORAGE_IDX } from '@/shared/const/localstorage';
 import { ArticleView } from '../../model/consts/articleConsts';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
-import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { Article } from '../../model/types/article';
+import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 
 interface ArticleListProps {
     className?: string;
@@ -66,7 +66,6 @@ export const ArticleList = memo(({
             className={cls.card}
             key={article.id}
             target={target}
-            index={index}
         />
     );
 
