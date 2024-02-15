@@ -37,6 +37,7 @@ const ArticlesPage = ({ className } : ArticlesPageProps) => {
             <Page
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
+                data-testid="ArticlesPage"
             >
                 {/* TODO решить вопрос со скролом и отображением фильтра */}
                 <ArticlesPageFilters />
