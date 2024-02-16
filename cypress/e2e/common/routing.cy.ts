@@ -17,7 +17,7 @@ describe('Роутинг', () => {
     });
     describe('Пользователь авторизован', () => {
         beforeEach(() => {
-            cy.login('admin', '123');
+            cy.login();
         });
         it('Переход открывает страницу профиля', () => {
             cy.visit('/profile/1');
