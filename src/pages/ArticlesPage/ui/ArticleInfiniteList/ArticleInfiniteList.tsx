@@ -5,16 +5,17 @@ import { ArticleList } from '@/entities/Article';
 import { Text } from '@/shared/ui/Text';
 import { getArticles } from '../../model/slices/articlesPageSlice';
 import {
-    getArticlesPageError,
-    getArticlesPageIsLoading,
-    getArticlesPageView,
+  getArticlesPageError,
+  getArticlesPageIsLoading,
+  getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
 
 interface ArticleInfiniteListProps {
-    className?: string;
+  className?: string;
 }
 
-export const ArticleInfiniteList = memo(({ className }: ArticleInfiniteListProps) => {
+export const ArticleInfiniteList = memo(
+  ({ className }: ArticleInfiniteListProps) => {
     const articles = useSelector(getArticles.selectAll);
     const isLoading = useSelector(getArticlesPageIsLoading);
     const view = useSelector(getArticlesPageView);
@@ -22,15 +23,16 @@ export const ArticleInfiniteList = memo(({ className }: ArticleInfiniteListProps
     const { t } = useTranslation();
 
     if (error) {
-        return <Text text={t('Ошибка при загрузке статей')} />;
+      return <Text text={t('Ошибка при загрузке статей')} />;
     }
 
     return (
-        <ArticleList
-            isLoading={isLoading}
-            view={view}
-            articles={articles}
-            className={className}
-        />
+      <ArticleList
+        isLoading={isLoading}
+        view={view}
+        articles={articles}
+        className={className}
+      />
     );
-});
+  },
+);

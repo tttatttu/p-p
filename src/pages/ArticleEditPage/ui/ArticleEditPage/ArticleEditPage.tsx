@@ -6,21 +6,21 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleEditPage.module.scss';
 
 interface ArticleEditPageProps {
-    className?: string;
+  className?: string;
 }
 
 const ArticleEditPage = memo(({ className }: ArticleEditPageProps) => {
-    const { t } = useTranslation();
-    const { id } = useParams<{id: string}>();
-    const isEdit = Boolean(id);
+  const { t } = useTranslation();
+  const { id } = useParams<{ id: string }>();
+  const isEdit = Boolean(id);
 
-    return (
-        <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
-            {isEdit
-                ? t('Редактирование статьи с ID = ') + id
-                : t('Создание новой статьи')}
-        </Page>
-    );
+  return (
+    <Page className={classNames(cls.ArticleEditPage, {}, [className])}>
+      {isEdit
+        ? t('Редактирование статьи с ID = ') + id
+        : t('Создание новой статьи')}
+    </Page>
+  );
 });
 
 export default ArticleEditPage;

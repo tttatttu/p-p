@@ -8,41 +8,45 @@ import cls from './ArticleViewSelector.module.scss';
 import { ArticleView } from '@/entities/Article';
 
 interface ArticleViewSelectorProps {
-    className?: string;
-    view: ArticleView,
-    onViewClick?: (view: ArticleView) => void;
+  className?: string;
+  view: ArticleView;
+  onViewClick?: (view: ArticleView) => void;
 }
 
 const viewTypes = [
-    {
-        view: ArticleView.SMALL,
-        icon: TiledIcon,
-    },
-    {
-        view: ArticleView.BIG,
-        icon: ListIcon,
-    },
+  {
+    view: ArticleView.SMALL,
+    icon: TiledIcon,
+  },
+  {
+    view: ArticleView.BIG,
+    icon: ListIcon,
+  },
 ];
 
-export const ArticleViewSelector = memo(({ className, view, onViewClick }: ArticleViewSelectorProps) => {
+export const ArticleViewSelector = memo(
+  ({ className, view, onViewClick }: ArticleViewSelectorProps) => {
     const onClick = (newView: ArticleView) => () => {
-        onViewClick?.(newView);
+      onViewClick?.(newView);
     };
 
     return (
-        <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
-            {viewTypes.map((viewType) => (
-                <Button
-                    key={viewType.view}
-                    theme={ButtonTheme.CLEAR}
-                    onClick={onClick(viewType.view)}
-                >
-                    <Icon
-                        Svg={viewType.icon}
-                        className={classNames('', { [cls.notSelected]: viewType.view !== view })}
-                    />
-                </Button>
-            ))}
-        </div>
+      <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
+        {viewTypes.map((viewType) => (
+          <Button
+            key={viewType.view}
+            theme={ButtonTheme.CLEAR}
+            onClick={onClick(viewType.view)}
+          >
+            <Icon
+              Svg={viewType.icon}
+              className={classNames('', {
+                [cls.notSelected]: viewType.view !== view,
+              })}
+            />
+          </Button>
+        ))}
+      </div>
     );
-});
+  },
+);
