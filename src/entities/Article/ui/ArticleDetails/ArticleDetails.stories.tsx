@@ -5,7 +5,7 @@ import {
   ArticleType,
   ArticleBlockType,
 } from '../../model/consts/articleConsts';
-import { Article } from '../..';
+import { Article } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
