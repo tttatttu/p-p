@@ -1,7 +1,17 @@
 .ArticlesPage {
     min-height: 100%;
+
+    .list {
+        margin-top: 30px;
+    }
 }
 
-.list {
-    margin-top: 30px;
+.ArticlesPageRedesigned {
+    min-height: 100%;
+    height: 100%;
+    width: 100%
+
+    // .list {
+    //     margin-top: 30px;
+    // }
 }
