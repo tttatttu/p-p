@@ -14,8 +14,7 @@ interface ArticleDetailsPageHeaderProps {
 }
 
 export const ArticleDetailsPageHeader = memo(
-  (props: ArticleDetailsPageHeaderProps) => {
-    const { className } = props;
+  ({ className }: ArticleDetailsPageHeaderProps) => {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const canEdit = useSelector(getCanEditArticle);
