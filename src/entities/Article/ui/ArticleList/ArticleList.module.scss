@@ -1,46 +1,21 @@
-.ArticleList {
-    display: contents;
-    height: 100%;
-}
-
 .BIG {
-    .card {
-        margin-bottom: 30px 30px 0;
-    }
-}
-
-.SMALL {
     .card {
         margin-bottom: 30px;
     }
 }
 
-.itemsWrapper {
+.SMALL {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 9px;
-    margin: 0 30px;
+    gap: 30px;
 
-}
+    .card {
+        display: inline-flex;
+        height: 300px;
+    }
 
-.skeleton {
-    padding-bottom: 30px;
-}
-
-.ItemContainer {
-    width: 230px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 8px;
-    margin-right: 30px;
-
-    // @media (max-width 1024px) {
-    //     width: 50%;
-    // }
-
-    // @media (max-width 300px) {
-    //     width: 100%;
-    // }
+    .row {
+        display: flex;
+        gap: 30px;
+    }
 }
