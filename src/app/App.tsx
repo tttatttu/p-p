@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserInited, initAuthData } from '@/entities/User';
@@ -28,7 +28,7 @@ function App() {
     <ToggleFeatures
       feature="isAppRedesigned"
       off={
-        <div className={classNames('app', {}, [theme])}>
+        <div id="app" className={classNames('app', {}, [theme])}>
           <Suspense fallback="">
             <Navbar />
             <div className="content-page">
@@ -39,7 +39,7 @@ function App() {
         </div>
       }
       on={
-        <div className={classNames('app_redesigned', {}, [theme])}>
+        <div id="app" className={classNames('app_redesigned', {}, [theme])}>
           <Suspense fallback="">
             <MainLayout
               header={<Navbar />}
