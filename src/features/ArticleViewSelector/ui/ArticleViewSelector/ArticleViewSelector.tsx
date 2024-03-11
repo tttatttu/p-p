@@ -63,6 +63,7 @@ export const ArticleViewSelector = memo(
               {viewTypes.map((viewType) => (
                 <Icon
                   clickable
+                  key={viewType.view}
                   onClick={onClick(viewType.view)}
                   Svg={viewType.icon}
                   className={classNames('', {
