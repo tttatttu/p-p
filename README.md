@@ -13,7 +13,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 - `npm run vite` - Запуск frontend проекта на vite
 - `npm run dev` - Запуск frontend проекта на webpack dev server + backend
 - `npm run dev:vite` - Запуск frontend проекта на vite + backend
-- `npm run start:dev:server` - Запуск backend сервера
+- `npm run dev:server` - Запуск backend сервера
 - `npm run build:prod` - Сборка в prod режиме
 - `npm run build:dev` - Сборка в dev режиме (не минимизирован)
 - `npm run lint:ts` - Проверка ts файлов линтером
@@ -176,7 +176,7 @@ Clear.args = {
 
 ---
 
-### Работа с feature-flags
+### Работа с feature-flag
 
 Разрешено использование feature flags только с помощью хелпера toggleFeatures
 
