@@ -52,8 +52,8 @@ export const ProfileCardRedesignedSkeleton = () => {
   );
 };
 
-export const ProfileCardRedesigned = memo((props: ProfileCardProps) => {
-  const {
+export const ProfileCardRedesigned = memo(
+  ({
     className,
     data,
     readonly,
@@ -65,72 +65,73 @@ export const ProfileCardRedesigned = memo((props: ProfileCardProps) => {
     onChangeUsername,
     onChangeCountry,
     onChangeCurrency,
-  } = props;
-  const { t } = useTranslation('profile');
+  }: ProfileCardProps) => {
+    const { t } = useTranslation('profile');
 
-  return (
-    <Card padding="24" max className={className}>
-      <VStack gap="32">
-        {data?.avatar && (
-          <HStack justify="center" max>
-            <Avatar size={128} src={data?.avatar} />
+    return (
+      <Card padding="24" border="partial" max className={className}>
+        <VStack gap="32">
+          {data?.avatar && (
+            <HStack justify="center" max>
+              <Avatar size={128} src={data?.avatar} />
+            </HStack>
+          )}
+          <HStack gap="24" max>
+            <VStack gap="16" max>
+              <Input
+                value={data?.first}
+                label={t('Имя')}
+                onChange={onChangeFirstname}
+                readonly={readonly}
+                data-testid="ProfileCard.firstname"
+              />
+              <Input
+                value={data?.lastname}
+                label={t('Фамилия')}
+                onChange={onChangeLastname}
+                readonly={readonly}
+                data-testid="ProfileCard.lastname"
+              />
+              <Input
+                value={data?.age}
+                label={t('Возраст')}
+                onChange={onChangeAge}
+                readonly={readonly}
+              />
+              <Input
+                value={data?.city}
+                label={t('Город')}
+                onChange={onChangeCity}
+                readonly={readonly}
+              />
+            </VStack>
+            <VStack gap="16" max>
+              <Input
+                value={data?.username}
+                label={t('Имя пользователя')}
+                onChange={onChangeUsername}
+                readonly={readonly}
+              />
+              <Input
+                value={data?.avatar}
+                label={t('Cсылка на аватар')}
+                onChange={onChangeAvatar}
+                readonly={readonly}
+              />
+              <CurrencySelect
+                value={data?.currency}
+                onChange={onChangeCurrency}
+                readonly={readonly}
+              />
+              <CountrySelect
+                value={data?.country}
+                onChange={onChangeCountry}
+                readonly={readonly}
+              />
+            </VStack>
           </HStack>
-        )}
-        <HStack gap="24" max>
-          <VStack gap="16" max>
-            <Input
-              value={data?.first}
-              label={t('Имя')}
-              onChange={onChangeFirstname}
-              readonly={readonly}
-              data-testid="ProfileCard.firstname"
-            />
-            <Input
-              value={data?.lastname}
-              label={t('Фамилия')}
-              onChange={onChangeLastname}
-              readonly={readonly}
-              data-testid="ProfileCard.lastname"
-            />
-            <Input
-              value={data?.age}
-              label={t('Возраст')}
-              onChange={onChangeAge}
-              readonly={readonly}
-            />
-            <Input
-              value={data?.city}
-              label={t('Город')}
-              onChange={onChangeCity}
-              readonly={readonly}
-            />
-          </VStack>
-          <VStack gap="16" max>
-            <Input
-              value={data?.username}
-              label={t('Имя пользователя')}
-              onChange={onChangeUsername}
-              readonly={readonly}
-            />
-            <Input
-              value={data?.avatar}
-              label={t('Cсылка на аватар')}
-              onChange={onChangeAvatar}
-              readonly={readonly}
-            />
-            <CurrencySelect
-              value={data?.currency}
-              onChange={onChangeCurrency}
-              readonly={readonly}
-            />
-            <CountrySelect
-              value={data?.country}
-              onChange={onChangeCountry}
-              readonly={readonly}
-            />
-          </VStack>
-        </HStack>
-      </VStack>
-    </Card>
-  );
-});
+        </VStack>
+      </Card>
+    );
+  },
+);
